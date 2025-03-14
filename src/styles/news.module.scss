@@ -1,0 +1,425 @@
+@tailwind components;
+
+.banner{
+  width:100%;
+  height:inherit;
+  margin: .5rem 0 .1875rem;
+  img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+/* 公司动态 */
+.companyWrap,.industryWrap,.resourceWrap,.aluK{
+  width:1400px;
+  margin:auto;
+}
+.firstNew{
+  padding-top:.375rem;
+  display:inline-flex;
+  width:inherit;
+  img{
+    // width: 560px;
+    height: 320px;
+  }
+  h5{
+    font-size:26px;
+    line-height: 30px;
+    font-weight:bold;
+  }
+  p{
+    color:#333;
+    line-height:30px;
+    margin:.0938rem 0;
+    text-align:justify;
+  }
+  .firstNewR{
+    padding-left:.1875rem;
+    position:relative;
+    .firstNewDate{
+      position:absolute;
+      left:.1875rem;
+      bottom:0;
+      color:#737373;
+      span{
+        font-size:30px;
+        line-height:.1875rem;
+        margin:0;
+      }
+      p{
+        font-size:14px;
+        line-height:.0875rem;
+        margin:0;
+      }
+    }
+  }
+}
+.newsWrap{
+  width:inherit;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: .375rem;
+  row-gap: .375rem;
+}
+.industryWrap {
+  .newsWrap{
+    padding-top: 60px;
+  }
+}
+.newItem{
+  background:#fff;
+  border:1px solid #f6f6f6;
+  position:relative;
+  -webkit-transition:all 0.3s linear;
+  transition:all 0.3s linear;
+  &:hover{
+    box-shadow: 0px 8px 10px 5px rgba(35,24,21,0.1);
+    -webkit-transition:all 0.3s linear;
+    transition:all 0.3s linear;
+    h5{
+      color:#bb030f;
+      -webkit-transition:all 0.3s linear;
+      transition:all 0.3s linear;
+    }
+    a{
+      color:#bb030f;
+      -webkit-transition:all 0.3s linear;
+      transition:all 0.3s linear;
+    }
+  }
+  .imgBox{
+    position: relative;
+    height:270px;
+    overflow:hidden;
+    img{
+      object-fit:fill;
+    }
+  }
+}
+.newTextBox{
+  padding:10px;
+  color:#737373;
+  position: relative;
+  h5{
+    font-size:26px;
+    font-weight:bold;
+    color:#000;
+    line-height: 26px;
+    height: .5625rem;
+    -webkit-transition:all 0.3s linear;
+    transition:all 0.3s linear;
+  }
+  b{
+    font-size:26px;
+  }
+  .link{
+    position:absolute;
+    left:10px;
+    bottom:10px;
+  }
+}
+.aluK{
+  margin-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  p{
+    display: inline-flex;
+    width: 48%;
+    padding: 10px;
+    font-weight: bold;
+    line-height: 20px;
+    align-items: center;
+    -webkit-transition:all 0.3s linear;
+    transition:all 0.3s linear;    
+    border-radius: 3px;
+    &:hover{
+      background-color: #eee;
+      -webkit-transition:all 0.3s linear;
+      transition:all 0.3s linear;    
+    }
+  i{
+      font-style: normal;
+      display: inline-block;
+      border-radius: 3px;
+      color: #EEEEEE;
+      padding: 2px 5px;
+      font-size: 14px;
+      margin-right: 10px;
+    }
+    span{
+      color: #999;
+      font-weight: normal;
+      margin-left: auto;
+      position: relative;
+      &::before{
+        content: '发布时间：';
+        position: absolute;
+        left: -90%;
+      }    
+    }
+  }
+}
+/* 新闻内页 */
+.newDetail{
+  width:8.75rem;
+  padding-top:.375rem;
+  margin:auto;
+  h5{
+    text-align:center;
+    font-size:26px;
+  }
+  p{
+    color:#737373;
+    margin:.125rem 0;
+    font-size: 16px;
+  }
+  img{
+    margin:.375rem auto .1875rem;
+  }
+  .linkBox{
+    a{
+      color:#737373;
+      margin:.125rem 0;
+      &:first-child{
+        float:left;
+      }
+      &:last-child{
+        float:right;
+      }
+    }
+  }
+}
+/* 加工视频 */
+.resourceWrap{
+  margin:30px auto 0;
+  text-align:center;
+  h2{
+    color:#bb030f;
+    font-size:36px;
+    font-weight:bold;
+    letter-spacing:6px;
+  }
+  p{
+    color:#bb030f;
+    font-size: 18px;
+  }
+  .videoWrap{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: .375rem;
+    row-gap: .375rem;
+    margin-top:.375rem;
+    .videoItem{
+      box-shadow: 0px 3px 10px 2px rgba(35,24,21,0.1);
+    }
+    .videoTitle{
+      padding:10px;
+      text-align:left;
+      font-size:24px;
+      font-weight:bold;
+      border:1px solid #efefef
+    }
+  }
+}
+
+// 响应式样式
+@media(min-width:1921px){
+  .banner{
+    width:calc(100vw - 22px);
+    height: initial;
+    img{
+      height: auto;
+      width: 100%;
+    }
+  }
+}
+@media(min-width:1080px) and (max-width:1400px){
+  .companyWrap,.industryWrap,.resourceWrap,.newDetail,.aluK{
+    width: 90%;
+  }
+  .newsWrap,.videoWrap{
+    column-gap: .25rem!important;
+    row-gap: .25rem!important;
+  }
+  .newsWrap{
+    width: 100%;
+  }
+  .firstNew{
+    width: 100%;
+    .isP{
+      display: none;
+    }
+  }
+  .aluK{
+    p{
+      width: 50%;
+    }
+  }
+}
+@media(min-width:980px) and (max-width:1079px){
+  .companyWrap,.industryWrap,.resourceWrap,.newDetail,.aluK{
+    width: 96%;
+  }
+  .firstNew{
+    width: 100%;
+    img{
+      height:260px;
+    }
+    h5{
+      font-size: 24px;
+    }
+    p{
+      line-height: 20px;
+    }
+    .isP{
+      display: none;
+    }
+  }
+  .newsWrap{
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .resourceWrap{
+    .videoWrap{
+      margin-top: .1875rem;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  .aluK{
+    p{
+      width: 100%;
+    }
+  }
+}
+@media(min-width:750px) and (max-width:979px){
+  .companyWrap,.industryWrap,.resourceWrap,.newDetail,.aluK{
+    width: 90%;
+  }
+  .firstNew{
+    width: 100%;
+    img{
+      height:200px;
+    }
+    h5{
+      font-size: 18px;
+      line-height: 20px;
+    }
+    p{
+      line-height: 18px;
+      margin-top: 5px;
+    }
+    .firstNewR{
+      padding-left: 10px;
+    }
+    .firstNewDate{
+      display: none;
+      
+    }
+    .isP{
+      display: none;
+    }
+  }
+  .newsWrap{
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .resourceWrap{
+    .videoWrap{
+      margin-top: .1875rem;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  .aluK{
+    p{
+      width: 100%;
+    }
+  }
+}
+@media (max-width:749px){
+  .companyWrap,.industryWrap,.resourceWrap,.newDetail,.aluK{
+    width: 90%;
+  }
+  .firstNew{
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 20px;
+    img{
+      height:200px;
+    }
+    h5{
+      font-size: 18px;
+      line-height: 24px;
+    }
+    p{
+      line-height: 20px;
+    }
+    .firstNewR{
+      padding-left: 0px;
+    }
+    .firstNewDate{
+      display: none;
+      
+    }
+    .isP{
+      display: none;
+    }
+  }
+  .newsWrap{
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    .newTextBox{
+      h5{
+        font-size: 20px;
+        height: 72px;
+      }
+    }
+  }
+  .resourceWrap{
+    .videoWrap{
+      margin-top: .1875rem;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  .newDetail{
+    .linkBox{
+      a{
+        display: block;
+        &:first-child{
+          float:none;
+        }
+        &:last-child{
+          float:none;
+        }
+      }
+    }
+  }
+  .aluK{
+    p{
+      width: 100%;
+    }
+  }
+}
+@media (max-width:530px){
+  .aluK{
+    width: 94%;
+    margin-top: 30px;
+    p{
+      margin-left: auto;
+      padding:8px  0px;
+      i{
+        margin-right: 4px;
+        text-wrap: nowrap;
+      }
+      a{
+        font-weight: normal;
+        font-size: 14px;
+      }
+      span{
+        display: none;
+      }
+    }
+    
+  }
+}

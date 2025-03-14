@@ -1,0 +1,1283 @@
+@tailwind components;
+
+.banner {
+	width: 100%;
+	height: initial;
+	margin: .5rem 0 .1875rem;
+	img {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+	}
+}
+/* 具体产品样式 */
+.productMain {
+	width: 1400px;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	i {
+		font-style: normal;
+	}
+	/* 侧边栏 */
+	.productSidedar{
+		width: 20%;
+		height: fit-content;
+		border-radius: 8px 8px 0 0;
+		border: 1px solid #bb030f;
+		overflow: hidden;
+		margin-top: .5rem;
+		.sidedarT {
+			background-color: #bb030f;
+			color: #fff;
+			font-weight: 400;
+			padding: 10px;
+			h3 {
+				font-size: 24px;
+			}
+			p {
+				font-size: 16px;
+			}
+		}
+		.productCategory {
+			padding: .0625rem;
+			display: flex;
+			justify-content: space-between;
+			height: .375rem;
+			line-height: .25rem;
+			span {
+				display: block;
+				font-size: 20px;
+				position: relative;
+				cursor: pointer;
+				&:hover {
+					color: #bb030f;
+				}
+			}
+			.selectCategory {
+				&::after {
+					content: '';
+					position: absolute;
+					bottom: -0.0625rem;
+					left: 50%;
+					transform: translateX(-50%);
+					border-style: solid;
+					border-width: 0 .0625rem .05rem;
+					border-color: transparent transparent #bb030f;
+				}
+			}
+		}
+		.productType {
+			line-height: 40px;
+			padding: 10px;
+			overflow: hidden;
+			border-top: 1px solid #bb030f;
+			p {
+				position: relative;
+				cursor: pointer;
+				font-size: 22px;
+				&:hover {
+					color: #bb030f;
+					&::after {
+						background-image: url('/icon/right-arrow-red.svg');
+					}
+				}
+				&::after {
+					content: '';
+					position: absolute;
+					right: 0;
+					top: .0688rem;
+					width: 18px;
+					height: 18px;
+					background-image: url('/icon/right-arrow.svg');
+				}
+			}
+		}
+		.typeActive {
+			p {
+				&::after {
+					background-image: url('/icon/down-arrow.svg') !important;
+				}
+			}
+		}
+		.productSeries {
+			height: content;
+			margin-top: 10px;
+			span {
+				display: block;
+				padding-left: 10px;
+				cursor: pointer;
+				font-size: 20px;
+				line-height: 36px;
+				&:hover {
+					background-color: #f1f1f1;
+					color: #bb030f;
+				}
+				a {
+					font-size: 16px;
+				}
+			}
+		}
+		.activeSerise {
+			background-color: #f1f1f1;
+			color: #bb030f;
+		}
+	}
+	/* 产品中心主体内容 */
+	.productC {
+		width: 78%;
+		.productBox {
+			box-sizing: border-box;
+			// margin-bottom:.375rem;
+			// 产品容器顶部内容
+			.productTopBox {
+				.productTop {
+					display: flex;
+					margin-top: .0625rem;
+					margin-bottom: .125rem;
+					display: flex;
+					// 快速查找
+					.prompt {
+						line-height: 26px;
+						span {
+							color: #bb030f;
+						}
+						a {
+							margin-right: 10px;
+							line-height: 40px;
+							&:hover {
+								color: #bb030f;
+							}
+						}
+					}
+					// 搜索框
+					.search {
+						width: 2rem;
+						height: .375rem;
+						margin-left: auto;
+						position: relative;
+						input[type=search] {
+							position: absolute;
+							top: 0;
+							width: 1.5rem;
+							border: 1px solid #bb030f;
+							height: .25rem;
+							border-radius: .125rem 0 0 .125rem;
+							padding-left: 10px;
+							outline: none;
+							font-size: 14px;
+						}
+						input[type=submit] {
+							position: absolute;
+							top: 0;
+							right: 0;
+							width: .5rem;
+							background-color: #bb030f;
+							color: #fff;
+							height: .25rem;
+							border-radius: 0 .125rem .125rem 0;
+							font-size: 14px;
+						}
+						.tips {
+							position: absolute;
+							top: .275rem;
+							font-size: 12px;
+							color: #bb030f;
+						}
+						.searchResult {
+							width: inherit;
+							position: absolute;
+							top: .275rem;
+							background: #fff;
+							box-shadow: 0px 5px 9px 0px rgba(35, 24, 21, 0.3);
+							padding: 10px;
+							border-radius: 10px;
+							z-index: +1;
+							p {
+								height: 36px;
+								line-height: 36px;
+								padding-left: 10px;
+								a {
+									font-size: 14px;
+								}
+								&:hover {
+									background: #f1f1f1;
+								}
+							}
+						}
+					}
+				}
+			}
+			// 产品标题
+			.productBoxTitle {
+				color: #bb030f;
+				position: relative;
+				width: fit-content;
+				line-height: .3125rem;
+				margin-top: -0.375rem;
+				b {
+					font-size: 36px;
+				}
+				span {
+					font-size: 22px;
+					margin-left: 10px;
+				}
+				&::after {
+					content: '';
+					position: absolute;
+					left: 0;
+					bottom: -5px;
+					width: 100%;
+					height: 5px;
+					background-color: #bb030f;
+				}
+			}
+			// 产品展示容器
+			.productList {
+				border-top: 1px solid #ccc;
+				padding-top: .1875rem;
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				column-gap: .1875rem;
+				row-gap: .1875rem;
+				margin-top: 5px;
+				.productItem {
+					border: 1px solid #ccc;
+					border-radius: 8px;
+					text-align: center;
+					padding: .1875rem .1875rem .125rem .1875rem;
+					img {
+						margin: auto;
+					}
+					&:hover {
+						.productPly {
+							display: none
+						}
+						.productHover {
+							display: block;
+						}
+						h5 {
+							color: #bb030f;
+						}
+					}
+					h5 {
+						font-size: 26px;
+						font-weight: bold;
+					}
+					.productPly {
+						display: block;
+						width: inherit;
+						line-height: 36px;
+						text-align: left;
+						background-color: #f3f3f3;
+						margin: 10px 0;
+						padding-left: 10px;
+						border-radius: 5px;
+						font-size: 18px;
+					}
+					.productHover {
+						display: none;
+						margin-top: 10px;
+					}
+					.productHover a {
+						border: 1px solid red;
+						border-radius: 5px;
+						display: block;
+						line-height: 36px;
+						color: #fff;
+						background-color: #bb030f;
+						margin-bottom: 20px;
+					}
+				}
+				.categoryItem {
+					border: 1px solid #bb030f;
+					padding: 0 10px;
+					height: .625rem;
+					line-height: .625rem;
+					border-radius: 8px;
+					position: relative;
+					overflow: hidden;
+					&:hover {
+						span {
+							color: #0d09ba;
+							-webkit-transition: all 0.1s linear;
+							transition: all 0.1s linear;
+						}
+					}
+					span {
+						display: block;
+						font-size: 36px;
+						font-weight: bold;
+						color: #bb030f;
+						// color: #fff;
+						-webkit-transition: all 0.1s linear;
+						transition: all 0.1s linear;
+					}
+					img {
+						position: absolute;
+						right: 0px;
+						bottom: 10px;
+						width: .375rem;
+						opacity: .58;
+					}
+				}
+			}
+			.seriseItem {
+				margin-top: 5px;
+				h3 {
+					font-size: 30px;
+					font-weight: bold;
+					color: #bb030f;
+					border-top: 1px solid #ccc;
+					padding: 10px 0;
+				}
+				.seriseGrid {
+					display: grid;
+					grid-template-columns: repeat(3, 1fr);
+					column-gap: .1875rem;
+					row-gap: .1875rem;
+					.productItem {
+						border: 1px solid #ccc;
+						border-radius: 8px;
+						text-align: center;
+						padding: .1875rem .1875rem .125rem .1875rem;
+						img {
+							margin: auto;
+						}
+						&:hover {
+							.productPly {
+								display: none
+							}
+							.productHover {
+								display: block;
+							}
+							h5 {
+								color: #bb030f;
+							}
+						}
+						h5 {
+							font-size: 26px;
+							font-weight: bold;
+						}
+
+						.productPly {
+							display: block;
+							width: inherit;
+							line-height: 36px;
+							text-align: left;
+							background-color: #f3f3f3;
+							margin: 10px 0;
+							padding-left: 10px;
+							border-radius: 5px;
+							font-size: 18px;
+						}
+
+						.productHover {
+							display: none;
+							margin-top: 10px;
+						}
+
+						.productHover a {
+							border: 1px solid red;
+							border-radius: 5px;
+							display: block;
+							line-height: 36px;
+							color: #fff;
+							background-color: #bb030f;
+							margin-bottom: 20px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+// 移动端产品跳转组件
+.productMobileEle{
+	display: none;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	font-size: 18px;
+	div{
+		width: 30%;
+		height: 36px;
+		line-height: 36px;
+		border-radius: 18px;
+		text-align: center;
+		margin-bottom: 20px;
+		font-weight: bold;
+		border: 1px solid #bb030f;
+	}
+	.productActive{
+		background-color: #bb030f;
+		color: #fff;
+	}
+}
+/* 产品图片和具体参数 */
+.productDetail1 {
+	display: flex;
+	padding-top: 30px;
+	border-top: 1px solid #ccc;
+
+	.productImgWrap {
+		width: 3.6875rem;
+		height: 3.5rem;
+		border: 2px solid #ccc;
+		position: relative;
+
+		.productImgList {
+			position: absolute;
+			bottom: 15px;
+			width: inherit;
+		}
+	}
+
+	/* 参数详情 */
+	.produceParamWrap {
+		margin-left: .1875rem;
+		width: 2.875rem;
+		position: relative;
+		h6 {
+			font-weight: bold;
+			font-size: 30px;
+			line-height: 36px;
+			color: #bb030f;
+		}
+
+		p {
+			color: #333;
+			line-height: .225rem;
+		}
+
+		.productParamList1 {
+			margin-top: 30px;
+			a {
+				margin-right: .1875rem;
+				img {
+					display: inline;
+					margin-right: 10px;
+				}
+			}
+		}
+
+		.productParamBtnGroup {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+		}
+	}
+}
+
+// 锚点链接
+.anchorBox {
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	margin-top: 30px;
+
+	a {
+		width: 100%;
+		text-align: center;
+		color: #000;
+		font-size: 18px;
+		font-weight: bold;
+		background: #EEEEEE;
+		-webkit-transition: all 0.1s linear;
+		transition: all 0.1s linear;
+
+		&:hover {
+			background: #bb030f;
+			color: #fff;
+			-webkit-transition: all 0.1s linear;
+			transition: all 0.1s linear;
+		}
+	}
+}
+
+// 锚点链接标题
+.anchor {
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	margin-top: 30px;
+	color: #000;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	background: #EEEEEE;
+	border: 1px solid #EEEEEE;
+}
+// 简介
+.introduction{
+	width: 90%;
+	.introductionDiv{
+		display: none;
+		width: 100%;
+		ul{
+			flex: 1;
+			text-align: center;
+			border: 1px solid #ccc;
+			p{
+				height: 40px;
+				font-size: 18px;
+				font-weight: 700;
+				line-height: 40px;
+				background-color: #f6f5f5;
+				border-bottom: 1px solid #ccc;
+			}
+			li{
+				font-size: 16px;
+				line-height: 40px;
+				height: 40px;
+				color: #666;
+			}
+		}
+	}
+}
+/* 产品简介 */
+.productTableW,.productTableM {
+	width: 100%;
+	text-align: center;
+	thead,tbody {
+		color: #666;
+		tr {
+			height: .375rem;
+			font-size: 16px;
+		}
+		th {
+			background: #F6F5F5;
+			color: #000;
+		}
+		td {
+			border-right: 1px solid #F6F5F5;
+			border-bottom: 1px solid #F6F5F5;
+		}
+	}
+}
+.productTableM{
+	display: none;
+	tbody{
+		th{
+			border-bottom: 1px solid #eaecec;
+		}
+	}
+}
+// 产品详情公共模块
+.companySt {
+	.grayText {
+		color: #666;
+		font-size: 16px;
+		line-height: .225rem;
+		width: inherit;
+	}
+}
+.iconList {
+	display: flex;
+	justify-content: space-between;
+	margin: 30px 0;
+	div {
+		text-align: center;
+		b {
+			display: block;
+			font-size: 24px;
+		}
+		p {
+			font-size: 16px;
+			color: #666;
+			line-height: 26px;
+		}
+	}
+	.iconWrap {
+		width: .9625rem;
+		height: .9625rem;
+		background: #F6F6F6;
+		border-radius: 50%;
+		margin: 0 auto 10px;
+		-webkit-transition: all 0.1s linear;
+		transition: all 0.1s linear;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 50%;
+		&:hover {
+			background: #bb030f;
+			-webkit-transition: all 0.1s linear;
+			transition: all 0.1s linear;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 50%;
+		}
+	}
+}
+
+.iconList div:nth-child(1) .iconWrap {
+	background-image: url('/icon/zan.svg');
+}
+
+.iconList div:nth-child(1) .iconWrap:hover {
+	background-image: url('/icon/white-zan.svg');
+}
+
+.iconList div:nth-child(2) .iconWrap {
+	background-image: url('/icon/support.svg');
+}
+
+.iconList div:nth-child(2) .iconWrap:hover {
+	background-image: url('/icon/white-support.svg');
+}
+
+.iconList div:nth-child(3) .iconWrap {
+	background-image: url('/icon/team.svg');
+	background-size: 70%;
+}
+
+.iconList div:nth-child(3) .iconWrap:hover {
+	background-image: url('/icon/white-team1.svg');
+	background-size: 70%;
+}
+
+.iconList div:nth-child(3) .iconWrap:hover {
+	background-image: url('/icon/white-team.svg');
+	background-size: 70%;
+}
+
+.iconList div:nth-child(4) .iconWrap {
+	background-image: url('/icon/advantage.svg');
+}
+
+.iconList div:nth-child(4) .iconWrap:hover {
+	background-image: url('/icon/white-advantage.svg');
+}
+
+.iconList div:nth-child(5) .iconWrap {
+	background-image: url('/icon/server.svg');
+}
+
+.iconList div:nth-child(5) .iconWrap:hover {
+	background-image: url('/icon/white-server.svg');
+}
+
+/* 典型用途 */
+.typical {
+	color: #666;
+	line-height: 30px;
+
+	span {
+		font-size: 16px;
+		display: block;
+		font-weight: bold;
+		padding-top: 15px;
+	}
+}
+
+/* 公司实力 */
+.companyIntro {
+	display: flex;
+	margin-top: 30px;
+	.stDetail {
+		text-align: left;
+		position: relative;
+		h6 {
+			font-size: 24px;
+			font-weight: bold;
+		}
+		span {
+			display: block;
+			font-size: 20px;
+			color: #000;
+			line-height: 36px;
+		}
+		li {
+			font-size: 16px;
+			list-style-type: none;
+			line-height: .1875rem;
+			margin: 10px 0;
+			color: #666;
+		}
+		.stDetailMin {
+			display: flex;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			div {
+				b {
+					display: block;
+					color: #104682;
+					font-size: 36px;
+					line-height: 36px;
+					font-weight: bold;
+				}
+				p {
+					color: #666;
+					margin-top: 15px;
+				}
+				&:nth-child(1) {
+					padding-right: .1875rem;
+				}
+				&:nth-child(2) {
+					padding-left: .1875rem;
+					border-left: 1px solid #999;
+				}
+			}
+		}
+	}
+}
+.companyLeft .stDetail {
+	margin-left: 20px;
+}
+.companyRight .stDetail {
+	margin-right: 20px;
+}
+
+// 我们的优势
+.usAdvantage {
+	border: 1px solid #eee;
+	.usAdvantageTitle {
+		width: inherit;
+		display: flex;
+		height: 60px;
+		line-height: 60px;
+		justify-content: space-around;
+		border: 1px solid #eee;
+		p {
+			color: #666;
+			font-weight: bold;
+		}
+	}
+
+	.usAdvantageContent {
+		display: flex;
+		color: #666;
+		div {
+			flex: 1;
+		}
+		p {
+			height: .375rem;
+			border-bottom: 1px solid #eee;
+			line-height: .375rem;
+		}
+		.usAdvantageContentL,
+		.usAdvantageContentR {
+			p {
+				span {
+					margin-right: 10px;
+				}
+			}
+		}
+		.usAdvantageContentL {
+			p {
+				padding-left: .5rem;
+			}
+		}
+		.usAdvantageContentR {
+			border-left: 1px solid #eee;
+			p {
+				padding-left: .25rem;
+				line-height: .1375rem;
+				padding-top: .0563rem;
+			}
+		}
+	}
+}
+
+// 响应式样式
+@media(min-width:1921px) {
+	.banner {
+		width: calc(100vw - 22px);
+		height: initial;
+		img {
+			height: auto;
+			width: 100%;
+		}
+	}
+	.productMain {
+		margin-top: 60px;
+	}
+}
+@media(min-width:1080px) and (max-width:1399px){
+	.productMain{
+		width: 8.75rem;
+		overflow: hidden;
+		.productSidedar{
+			width: 26%;
+		}
+		.productC{
+			width: 72%;
+		}
+	}
+	.companyIntro{
+		.stDetail{
+			.stDetailMin{
+				display: none;
+			}
+		}
+	}
+}
+@media(min-width:980px) and (max-width:1079px){
+	.productMain{
+		width: 96%;
+		.productSidedar{
+			width: 30%;
+		}
+		.productC{
+			width: 68%;
+			.productBox{
+				.productTopBox{
+					.productTop{
+						.prompt{
+							a{
+								margin-right: 4px;
+							}
+						}
+					}
+				}
+				.productList{
+					grid-template-columns: repeat(2, 1fr);
+				}
+			}
+		}
+	}
+	.productDetail1{
+		flex-wrap: wrap;
+		.productImgWrap{
+			width: 100%;
+			img{
+				margin: auto;
+			}
+		}
+		.produceParamWrap{
+			padding-top: 10px;
+			padding-bottom: 60px;
+			width: inherit;
+			margin-left: 0;
+			p{
+				font-size: 16px;
+			}
+			.productParamList1{
+				margin-top: 15px;
+			}
+		}
+	}
+	.anchorBox{
+		display: none;
+	}
+	.companyIntro{
+		.stDetail{
+			.stDetailMin{
+				display: none;
+			}
+		}
+	}
+}
+@media(min-width:750px) and (max-width:979px){
+	.productMain{
+		width: 90%;
+		.productSidedar{
+			display: none;
+		}
+		.productC{
+			width: 100%;
+			.productBox{
+				.productTopBox{
+					.productTop{
+						.prompt{
+							a{
+								margin-right: 3px;
+							}
+						}
+					}
+				}
+				.productList{
+					grid-template-columns: repeat(3, 1fr);
+				}
+			}
+		}
+	}
+	.productDetail1{
+		flex-wrap: wrap;
+		.productImgWrap{
+			width: 100%;
+			height: 500px;
+			img{
+				margin: auto;
+			}
+		}
+		.produceParamWrap{
+			padding-top: 10px;
+			padding-bottom: 60px;
+			width: inherit;
+			margin-left: 0;
+			p{
+				font-size: 16px;
+			}
+			.productParamList1{
+				margin-top: 15px;
+			}
+		}
+	}
+	.anchorBox{
+		display: none;
+	}
+	.companyIntro{
+		.stDetail{
+			.stDetailMin{
+				display: none;
+			}
+		}
+	}
+	.usAdvantage{
+		.usAdvantageContent{
+			div{
+				flex: auto;
+			}
+			.usAdvantageContentL{
+				width: 60%;
+				p{
+					padding-left: 10px;
+				}
+			}
+		}
+	}
+	.iconList{
+		div{
+			flex: 1;
+			b{
+				font-size: 20px;
+			}
+		}
+	}
+}
+@media(min-width:560px) and (max-width:749px){
+	.productMain{
+		width: 90%;
+		.productSidedar{
+			display: none;
+		}
+		.productC{
+			width: 100%;
+			.productBox{
+				.productTopBox{
+					.productTop{
+						.prompt{
+							display: none;
+							a{
+								margin-right: 3px;
+							}
+						}
+						.search{
+							width: 100%;
+							input[type=search]{
+								width: 70%;
+							}
+							input[type=submit] {
+								width: 30%;
+							}
+						}
+					}
+				}
+				.productBoxTitle{
+					margin-top: -40px;
+				}
+				.productList{
+					grid-template-columns: repeat(2, 1fr);
+				}
+				.seriseItem{
+					.seriseGrid{
+						grid-template-columns: repeat(2, 1fr);
+					}
+				}
+			}
+		}
+	}
+	.productDetail1{
+		flex-wrap: wrap;
+		.productImgWrap{
+			width: 100%;
+			height: 400px;
+			img{
+				margin: auto;
+			}
+		}
+		.produceParamWrap{
+			padding-top: 10px;
+			padding-bottom: 60px;
+			width: inherit;
+			margin-left: 0;
+			p{
+				font-size: 16px;
+			}
+			.productParamList1{
+				margin-top: 15px;
+			}
+		}
+	}
+	.anchorBox{
+		display: none;
+	}
+	.companyIntro{
+		.stDetail{
+			.stDetailMin{
+				display: none;
+			}
+		}
+	}
+	.usAdvantage{
+		.usAdvantageContent{
+			div{
+				flex: auto;
+			}
+			.usAdvantageContentL{
+				width: 60%;
+				p{
+					padding-left: 10px;
+				}
+			}
+		}
+	}
+	.iconList{
+		div{
+			flex: 1;
+			b{
+				font-size: 20px;
+			}
+		}
+	}
+	.productTableW{
+		display: none;
+	}
+	.productTableM{
+		display: table;
+	}
+	.introduction{
+		width: inherit;
+		.introductionDiv{
+			display: flex;
+		}
+	}
+	.typical{
+		line-height: 26px;
+		p{
+			font-size: 14px;
+		}
+	}
+	.iconList{
+		div{
+			b{
+				font-size: 18px;
+			}
+			p{
+				display: none;
+			}
+		}
+		.iconWrap{
+			width: 80px;
+			height: 80px;
+		}
+	}
+	.usAdvantage{
+		.usAdvantageContent{
+			.usAdvantageContentL{
+				width:70%;
+				padding-right: 10px;
+			}
+			.usAdvantageContentR{
+				p{
+					padding:0 10px;
+				}
+			}
+			p{
+				line-height: 22px!important;
+				height: 60px;
+			}
+		}
+	}
+	.productMobileEle{display: flex;}
+}
+@media(max-width:559px){
+	.productMain{
+		width: 90%;
+		.productSidedar{
+			display: none;
+		}
+		.productC{
+			width: 100%;
+			.productBox{
+				.productTopBox{
+					.productTop{
+						.prompt{
+							display: none;
+							a{
+								margin-right: 3px;
+							}
+						}
+						.search{
+							width: 100%;
+							input[type=search]{
+								width: 70%;
+							}
+							input[type=submit] {
+								width: 30%;
+							}
+						}
+					}
+				}
+				.productBoxTitle{
+					margin-top: -40px;
+					b{
+						font-size: 30px;
+					}
+				}
+				.productList{
+					grid-template-columns: repeat(2, 1fr);
+					column-gap: 15px;
+					row-gap: 15px;
+					.productItem {
+						padding: 15px 15px 10px 15px;
+					}
+				}
+				.seriseItem{
+					.seriseGrid{
+						grid-template-columns: repeat(2, 1fr);
+						column-gap: 15px;
+						row-gap: 15px;
+						.productItem {
+							padding: 15px 15px 10px 15px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.productDetail1{
+		flex-wrap: wrap;
+		.productImgWrap{
+			width: 100%;
+			height: 250px;
+			img{
+				margin: auto;
+			}
+		}
+		.produceParamWrap{
+			padding-top: 10px;
+			padding-bottom: 60px;
+			width: inherit;
+			margin-left: 0;
+			p{
+				font-size: 14px;
+			}
+			.productParamList1{
+				margin-top: 15px;
+				a{
+					margin-right: 15px;
+				}
+			}
+		}
+	}
+	.anchorBox{
+		display: none;
+	}
+	.usAdvantage{
+		.usAdvantageContent{
+			.usAdvantageContentL{
+				width:60%;
+				p{
+					padding-right: 10px;
+					padding-left: 10px;
+				}
+			}
+			.usAdvantageContentR{
+				p{
+					padding:0 10px;
+				}
+			}
+			p{
+				line-height: 20px!important;
+				height: 85px;
+			}
+		}
+	}
+	.productTableW{
+		display: none;
+	}
+	.productTableM{
+		display: table;
+	}
+	.introduction{
+		width: inherit;
+		.introductionDiv{
+			display: flex;
+		}
+	}
+	.typical{
+		line-height: 26px;
+		p{
+			font-size: 14px;
+		}
+	}
+	.iconList{
+		justify-content: center;
+		flex-wrap: wrap;
+		div{
+			margin: 10px 15px 0;
+			b{
+				font-size: 18px;
+			}
+			p{
+				display: none;
+			}
+		}
+		.iconWrap{
+			width: 60px;
+			height: 60px;
+		}
+	}
+	.companyIntro{
+		img{
+			width: 40%;
+			height: auto;
+		}
+		.stDetail{
+			width: 60%;
+			.stDetailMin{
+				width: 100%;
+				display: flex;
+				div{
+					b{
+						font-size: 18px;
+						line-height: 18px;
+					}
+					p{
+						font-size: 14px;
+						margin-top: 5px;
+					}
+					&:nth-child(1) {
+						width: 40%;
+						padding-right: 0;
+					}
+					&:nth-child(2) {
+						padding-left: 0;
+						border-left: none;
+					}
+				}
+			}
+			h6{
+				font-size: 18px;
+			}
+			li{
+				display: none;
+			}
+			span{
+				display: none;
+			}
+		}
+	}
+	.companyLeft .stDetail {
+		margin-left: 10px;
+	}
+	.companyRight .stDetail {
+		margin-right: 10px;
+	}
+	.productMobileEle{display: flex;}
+}

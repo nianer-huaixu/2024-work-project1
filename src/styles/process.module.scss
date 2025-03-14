@@ -1,0 +1,684 @@
+@tailwind components;
+
+.banner {
+	width: 100%;
+	height: initial;
+	margin: .5rem 0 .1875rem;
+
+	img {
+		height: 100%;
+		width: 100%;
+    object-fit: cover;
+	}
+}
+.processMain{ 
+  width:1400px;
+  margin:auto;  
+  margin-top:-0.1375rem;
+  position: relative;
+  span{
+    font-size: 20px;
+  }
+  .rightTips{
+    position: absolute;
+    right: 0;
+    width: max-content;
+    height: fit-content;
+    background-color:#bb030f;
+    color:#fff;
+    margin-top:-130px;
+    padding:.125rem .2188rem;
+    text-align:center;
+  }
+  .anchorBox{
+    width:100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    line-height: .375rem;
+    height: .375rem;
+    margin-top: 100px;
+    a{
+      width:100%;
+      text-align:center;
+      color:#000;
+      font-size:18px;
+      line-height:.375rem;
+      font-weight:bold;
+      background: #EEEEEE;
+      -webkit-transition:all 0.1s linear;
+      transition:all 0.1s linear;
+      &:hover{
+        background: #bb030f;
+        color:#fff;
+        -webkit-transition:all 0.1s linear;
+        transition:all 0.1s linear;
+      }
+      &:first-child{
+        border-bottom: 2px solid #bb030f;
+      }
+    }
+  }
+  .material{
+    .item{
+      display:flex;
+      margin-top:.1875rem;
+      h3{
+        color:#bb030f;
+        font-size:26px;
+        font-weight:bold;
+        margin-bottom: .0625rem;
+      }
+      p{
+        font-size:14px;
+        text-align:justify;
+        line-height: .175rem;
+      }
+      img{
+        width: 35%;
+        height: auto;
+      }
+      .itemLeft,.itemRight{
+        position:relative;
+        width: 65%;
+      }
+      .itemLeft{
+        margin-left:.125rem;
+      }
+      .itemRight{
+        margin-right:.125rem;
+      }
+      .itemImg{
+        display: block;
+        width: -webkit-fill-available;
+        position:absolute;
+        bottom:0;
+        display:flex;
+        justify-content: space-between;
+        img{
+          width: calc(50% - 5.008px);
+          &:first-child{
+              margin-right: .0625rem;
+          }
+        }
+      }
+    }
+  }
+  .craft{
+    background: url('https://www.yangdong.co:443/yangdong_web/process_img/craft_bg.jpg');
+    .craftMain{
+      margin: .1875rem .375rem 0;
+      padding-bottom: .375rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: .1875rem;
+      row-gap: .1875rem;
+      div{
+        background-color: #fff;
+        box-shadow: 0px 5.008px 9.008px 0px rgba(35,24,21,0.1);
+        -webkit-transition:all 0.3s linear;
+        transition:all 0.3s linear;
+        &:hover{
+          box-shadow: 0px 10px 18px 10px rgba(35,24,21,0.25);
+          -webkit-transition:all 0.3s linear;
+          transition:all 0.3s linear;
+        }
+        p{
+          font-size: 22px;
+          line-height: .1875rem;
+          font-weight: bold;
+          padding: 15.008px;
+        }
+      }
+    }
+  }
+  .dispose{
+    .disposeMain{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: .1875rem;
+      row-gap: .1875rem;
+      div{
+        width: inherit;
+        border: 1.008px solid #ccc;
+        img{
+          width: 100%;
+        }
+        h4{
+          font-size: 20px;
+          font-weight: bold;
+          margin: .0625rem;
+        }
+        p{
+          font-size: 14px;
+          line-height: .1625rem;
+          margin:0 .0625rem;
+        }
+      }
+    }
+  }
+  .adv{
+    text-align: center;
+    .advCard{
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      column-gap: .1875rem;
+      .card{
+        background-color: #0d08ba;
+        color: #fff;
+        .shape{
+          font-size: .375rem;
+          height: min-content;
+          line-height: 1.25rem;
+          width: 80%;
+          aspect-ratio: 1 / 1;
+          margin: .125rem auto 0;
+          background: url('/icon/shape.svg')no-repeat center;
+          background-size: 100%;
+        }
+        p{
+          font-size: .15rem;
+        }
+      }
+    }
+    .grayP{
+      padding:.0313rem .625rem;
+      background-color:#ddd;
+      display:block;
+      width:60%;
+      margin:.0625rem auto;
+      font-size: 14px;
+    }
+    .grayPE{
+      color:#666;
+      font-size:18px;
+    }
+    .flowTitle{
+      font-size: 36px;
+      font-weight:bold;
+      margin-top:.1875rem;
+      span{
+        font-size: inherit;
+      }
+    }
+    .advFlow{
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      column-gap: .1875rem;
+      row-gap: .1875rem;
+      margin-top: .375rem;
+      .flow{
+        img{
+          margin: auto;
+        }
+        span{
+          color: #0d08ba;
+          font-size: 26px;
+          font-weight: bold;
+          margin-top: .0625rem;
+        }
+        p{
+          font-size: 18px;
+          margin-top: .05rem;
+        }
+      }
+    }
+  }
+}
+
+.facility{
+  background: url('https://www.yangdong.co:443/yangdong_web/process_img/facility_bg.jpg')no-repeat;
+  text-align: justify;
+  padding-bottom: .1875rem;
+  p{
+    color: #fff;
+  }
+  .facilityMain{
+    width: 1400px;
+    margin: auto;
+    .facilityGrid1,.facilityGrid2{
+      display: grid;
+      div{
+        overflow: hidden;
+        position: relative;
+        img{
+          -webkit-transition:all 0.3s linear;
+          transition:all 0.3s linear;
+        }
+        &:hover{
+          img{
+            transform:scale(1.1);
+            -webkit-transition:all 0.3s linear;
+            transition:all 0.3s linear;
+          }
+        }
+        span{
+          position: absolute;
+          bottom: 10px;
+          font-size: 26px;
+          background-color: rgba(0,0,0,0.2);
+          color: #fff;
+        }
+      }
+    }
+    .facilityGrid1{
+      width: calc(100% - .375rem);
+      grid-gap: .1875rem .1875rem;
+      grid-template-columns: repeat(3,33.33%);
+      margin-bottom: .1875rem;
+      div{
+        span{
+          padding: 0 30px 3px;
+          left: .0625rem;
+        }
+        &:nth-child(2){
+          grid-column-start: 2;
+          grid-column-end: 4;
+          grid-row-start: 1;
+          grid-row-end: 3;
+          span{
+            left: .0625rem;
+            padding: 0 .125rem .0187rem;
+          }
+        }
+      }
+    }
+    .facilityGrid2{
+      width: 100%;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: .1875rem .1875rem;
+      div{
+        background: skyblue;
+        span{
+          width: calc(100% - .125rem);
+          margin: 0 .0625rem;
+          text-align: center;
+          padding-bottom: .0187rem;
+        }
+      }
+    }
+    .facilityTip{
+      font-size:.1375rem;
+      text-align:center;
+      margin-top:.1875rem;
+    }
+  }
+}
+// 响应式样式
+@media(min-width:1921px){
+  .banner{
+    width:calc(100vw - 22px);
+    height: initial;
+    img{
+      height: auto;
+      width: 100%;
+    }
+  }
+}
+@media(min-width:1080px) and (max-width:1400px) {
+  .processMain{
+    width: 90%;
+    .adv{
+      .advFlow{
+        .flow{
+          span{
+            font-size: 20px;
+          }
+          p{
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+  .facility{
+    .facilityMain{
+      width: 90%;
+    }
+  }
+}
+@media(min-width:980px) and (max-width:1079px) {
+  .processMain{
+    width: 96%;
+    .adv{
+      .advFlow{
+        .flow{
+          span{
+            font-size: 20px;
+          }
+          p{
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+  .facility{
+    .facilityMain{
+      width: 96%;
+    }
+  }
+}
+@media(min-width:750px) and (max-width:979px) {
+  .processMain{
+    width: 90%;
+    .material{
+      .item{
+        .itemLeft,.itemRight{
+          position:relative;
+          width: 70%;
+        }
+        img{
+          // width: 35%;
+          width: 30%;
+          height: auto;
+        }
+      }
+    }
+    .craft{
+      .craftMain{
+        margin: 20px 30px 0;
+        padding-bottom: 30px;
+        div{
+          p{
+            font-size: 18px;
+          }
+        }
+      }
+    }
+    .dispose{
+      .disposeMain{
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .adv{
+      .advCard{
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: .1875rem;
+        row-gap: .1875rem;
+      }
+      .grayP{
+        width: 90%;
+      }
+      .flowTitle{
+        font-size: 30px;
+      }
+      .advFlow{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        .flow{
+          span{
+            font-size: 18px;
+          }
+          p{
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  .facility{
+    .facilityMain{
+      width: 90%;
+      .facilityGrid1,.facilityGrid2{
+        div{
+          span{
+            font-size: 20px;
+            padding: 0 5px 3px;
+          }
+        }
+      }
+    }
+  }
+}
+@media(min-width:560px) and (max-width:749px) {
+  .processMain{
+    width: 90%;
+    .anchorBox{
+      // margin-top: 60px;
+      a{
+        font-size:16px;
+      }
+    }
+    .material{
+      .item{
+        flex-direction: column;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #ccc;
+        img{
+          width: 100%;
+        }
+        .itemLeft,.itemRight{
+          position:relative;
+          width: 100%;
+        }
+        .itemLeft{
+          margin-left:0;
+        }
+        .itemRight{
+          margin-right:0;
+        }
+      }
+      .itemReserve{
+        flex-direction: column-reverse;
+      }
+    }
+    .craft{
+      .craftMain{
+        margin: 10px 15px 0;
+        padding-bottom: 30px;
+        grid-template-columns: repeat(2, 1fr);
+        div{
+          p{
+            font-size: 18px;
+          }
+        }
+      }
+    }
+    .dispose{
+      .disposeMain{
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    .adv{
+      .advCard{
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: .1875rem;
+        row-gap: .1875rem;
+        .card{
+          p{
+            font-size: 16px;
+          }
+        }
+      }
+      .grayP{
+        width: 100%;
+      }
+      .grayPE{
+        font-size: 16px;
+      }
+      .flowTitle{
+        font-size: 26px;
+      }
+      .advFlow{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        .flow{
+          span{
+            font-size: 18px;
+          }
+          p{
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  .facility{
+    .facilityMain{
+      width: 90%;
+      .facilityGrid1,.facilityGrid2{
+        div{
+          span{
+            font-size: 14px;
+            padding: 0 5px 3px;
+          }
+        }
+      }
+      .facilityGrid1{
+        width: calc(100% - 20px);
+        grid-gap: 10px 10px;
+        margin-bottom: 10px;
+      }
+      .facilityGrid2{
+      grid-gap: 10px 10px;
+      }
+      .facilityTip{
+        font-size: 14px;
+      }
+    }
+  }
+}
+@media(max-width:559px) {
+  .processMain{
+    width: 90%;
+    .anchorBox{
+      // margin-top: 80px;
+      a{
+        font-size:16px;
+      }
+    }
+    .anchorBox{
+      margin-top: 40px;
+    }
+    .material{
+      .item{
+        flex-direction: column;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #ccc;
+        img{
+          width: 100%;
+        }
+        .itemLeft,.itemRight{
+          position:relative;
+          width: 100%;
+        }
+        .itemLeft{
+          margin-left:0;
+        }
+        .itemRight{
+          margin-right:0;
+        }
+      }
+      .itemReserve{
+        flex-direction: column-reverse;
+      }
+    }
+    .craft{
+      .craftMain{
+        margin: 10px 15px 0;
+        padding-bottom: 30px;
+        grid-template-columns: repeat(1, 1fr);
+        div{
+          img{
+            width: 100%;
+          }
+          p{
+            font-size: 18px;
+          }
+        }
+      }
+    }
+    .dispose{
+      .disposeMain{
+        grid-template-columns: repeat(1, 1fr);
+        div{
+          h4,p{
+            margin: 0 15px;
+          }
+        }
+      }
+    }
+    .adv{
+      .advCard{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: .1875rem;
+        row-gap: .1875rem;
+        .card{
+          p{
+            font-size: 16px;
+          }
+        }
+      }
+      .grayP{
+        width: 100%;
+      }
+      .grayPE{
+        font-size: 14px;
+      }
+      .flowTitle{
+        font-size: 16px;
+      }
+      .advFlow{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        .flow{
+          span{
+            font-size: 18px;
+          }
+          p{
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  .facility{
+    .facilityMain{
+      width: 90%;
+      .facilityGrid1,.facilityGrid2{
+        div{
+          span{
+            font-size: 14px;
+            padding: 0 5px 3px;
+            bottom: 5px;
+          }
+        }
+      }
+      .facilityGrid1{
+        width: calc(100% - 10px);
+        grid-template-columns: repeat(2,50%);
+        grid-gap: 10px 10px;
+        margin-bottom: 10px;
+        div{
+          span{
+            width: calc(100% - .125rem);
+            margin: 0 .0625rem;
+            text-align: center;
+            left: 0;
+          }
+          &:nth-child(2){
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            span{
+              width: initial;
+              left: 0px;
+              padding: 0 .125rem .0187rem;
+              text-align: left;
+            }
+          }
+        }
+      }
+      .facilityGrid2{
+      grid-gap: 10px 10px;
+      grid-template-columns: repeat(2, 1fr);
+
+      }
+      .facilityTip{
+        font-size: 14px;
+      }
+    }
+  }
+}
