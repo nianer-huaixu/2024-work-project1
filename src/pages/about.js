@@ -15,18 +15,6 @@ import styles from '../styles/about.module.scss'
 import fremaworkImg from '../img/about/fremawork.png'
 
 // 发展历程 start
-import about2012 from '../img/about/2012.png'
-import about2014 from '../img/about/2014.png'
-import about2015 from '../img/about/2015.png'
-import about2016 from '../img/about/2016.png'
-import about2017 from '../img/about/2017.png'
-import about2018 from '../img/about/2018.png'
-import about2019 from '../img/about/2019.png'
-import about2020 from '../img/about/2020.png'
-import about2021 from '../img/about/2021.png'
-import about2022 from '../img/about/2022.png'
-import about2023 from '../img/about/2023.png'
-import about2024 from '../img/about/2024.png'
 
 const URL = 'https://www.yangdong.co:8443/yangdong_web/'
 function AdaptiveHeight() {
@@ -53,63 +41,63 @@ function AdaptiveHeight() {
   const data =[
     {
       year:2012,
-      img:about2012,
+      img:URL +'about/2012.png',
       intro:'2012年5月：扬东铝业成立',
     },
     {
       year:2014,
-      img:about2014,
+      img:URL +'about/2014.png',
       intro:'2014年4月：与全球知名铝厂正在合作',
     },
     {
       year:2015,
-      img:about2015,
+      img:URL +'about/2015.png',
       intro:'2015年3月：建立综合性现货铝材网上超市',
     },
     {
       year:2016,
-      img:about2016,
+      img:URL +'about/2016.png',
       intro:'2016年6月：实现铝材品种齐全与加工一体化',
     },
     {
       year:2017,
-      img:about2017,
+      img:URL +'about/2017.png',
       intro:'2017年：成为国内领先集铝批发零售、原材料加工、国际贸易和技术咨询为一体的大型多元化企业',
     },
     {
       year:2018,
-      img:about2018,
+      img:URL +'about/2018.png',
       intro:'2018年：成立集团公司，公司通过了ISO9001:2015质量体系、3A信用体系认证',
     },
     {
       year:2019,
-      img:about2019,
+      img:URL +'about/2019.png',
       intro:'2019年9月：公司通过国际安全标准测试，获得欧盟CE认证',
     },
     {
         
         year:2020,
-        img:about2020,
+        img:URL +'about/2020.png',
         intro:'2020年：荣获2020年中国房地产开发企业500强首选供应商·铝型材类',
     },
     {
       year:2021,
-      img:about2021,
+      img:URL +'about/2021.png',
       intro:'2021年12月：获得“江苏省级企业技术中心”称号',
     },
     {
       year:2022,
-      img:about2022,
+      img:URL +'about/2022.png',
       intro:'2022年：一直在路上，坚持在高端铝合金原材料路上前进。',
     },
     {
       year:2023,
-      img:about2023,
+      img:URL +'about/2023.png',
       intro:'2023年：积极拥抱ESG 绿电使用从我做起！',
     },
     {
-      year:2024,
-      img:about2024,
+      year:2025,
+      img:URL +'about/2024.png',
       intro:'2025年一切敬请期待......',
     }
   ]
@@ -117,7 +105,7 @@ function AdaptiveHeight() {
     return <div key={i}>
       <div className={styles.historyItem}>
         <span>{item.year}</span>
-        <Image src={item.img} alt={item.year}></Image>
+        <img src={item.img} />
       </div>
       <p>{item.intro}</p>
     </div>
