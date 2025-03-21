@@ -121,8 +121,8 @@ Storage.prototype.setCanExpireLocal = (key, value, expire) => {
       window.removeEventListener('resize',handleWindowResize)
     }
   },[])
-const pcImgURL = 'https://www.yangdong.co:443/yangdong_web/banner/pc/sell_banner.webp'
-const mobileImgURL= 'https://www.yangdong.co:443/yangdong_web/banner/mobile/sell_banner.webp'
+const pcImgURL = 'https://www.yangdong.co:8443/yangdong_web/banner/pc/sell_banner.jpg'
+const mobileImgURL= 'https://www.yangdong.co:8443/yangdong_web/banner/mobile/sell_banner.jpg'
   return(
     <main>
       <div className={styles.banner}><img src={windowSize.innerWidth >= 750 ? pcImgURL : mobileImgURL}/></div>

@@ -46,7 +46,7 @@ function Product() {
   useEffect(() => { 
       fetchProductData()
   }, [router.query])
-  const host = 'https://www.yangdong.co:443/'
+  const host = 'https://www.yangdong.co:8443/'
   const productItem = data?.list.map((item,i)=>{
     return <div key={i} className={styles.productItem}>
       <Link href={{pathname:'/product/detail',query:{detail:`${item.name + (item.spe?item.spe:store.getState().productReducer.title.c_t)}`}}}>

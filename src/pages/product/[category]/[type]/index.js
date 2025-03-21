@@ -46,7 +46,7 @@ export default function ProductType() {
 	useEffect(() => { 
 		fetchProductData()
 	}, [category,type])
-	const host = 'https://www.yangdong.co:443/'
+	const host = 'https://www.yangdong.co:8443/'
 	const productList = ['铝板','铝棒','铝卷','铝管','铝型材','铝锻件']
 	return(
 		<main>

@@ -3,11 +3,11 @@ import { useState,useEffect } from 'react'
 import styles from '../styles/applicationfields.module.scss'
 
 export default function Applicationfields() {
-  const imgUrl = 'https://www.yangdong.co:443/yangdong_web'
+  const imgUrl = 'https://www.yangdong.co:8443/yangdong_web'
 
   const data =[
     {
-      img:'https://www.yangdong.co:443/yangdong_web/app_img/1.png',
+      img:'https://www.yangdong.co:8443/yangdong_web/app_img/1.png',
       alt:'航天航空铝合金应用',
       title:'航天航空铝合金产品应用',
       e_title:'Application ofaerospace aluminum alloy products',
@@ -15,12 +15,12 @@ export default function Applicationfields() {
       content2:'通过铝合金复合材料的应用,航空航天飞行器上的外壳材料能够降低5%-7%的密度,材料刚度提高7%，降低10%的重量,以此提高燃料效率,同时因为铝合金材料的耐腐蚀性和良好的抗疲劳性及抗损伤容限性,延长检查间隔的时间,使得航天器的维护成本降低。较低的资本成本，铝合金的相比钢材具有一定的价格优势。',
       model:'2024、7075、7475、7050、7150',
       trait:'高强、高韧、高抗损伤容限',
-      img01:'https://www.yangdong.co:443/yangdong_web/app_img/2.png',
-      img02:'https://www.yangdong.co:443/yangdong_web/app_img/3.png',
+      img01:'https://www.yangdong.co:8443/yangdong_web/app_img/2.png',
+      img02:'https://www.yangdong.co:8443/yangdong_web/app_img/3.png',
       href:'application01'
     },
     {
-      img:'https://www.yangdong.co:443/yangdong_web/app_img/4.png',
+      img:'https://www.yangdong.co:8443/yangdong_web/app_img/4.png',
       alt:'轨道交通铝合金应用',
       title:'轨道交通铝合金产品应用',
       e_title:'Application of aluminum alloy products in rail transit',
@@ -28,12 +28,12 @@ export default function Applicationfields() {
       content2:'供应的铁路用铝主要有铁路弹簧铝、扣件用铝、道岔用铝、钩尾框用铝、铁路轴承铝、欧标合金铝，美标合金铝等产品，全部通过国家铁道部认可并具备了批量供货能力，大量用于指导铁路货车、高速客车、动车组列车的关键部件，成为其铁路优秀供应商。',
       model:'5052、5754、5083、5A06、6061、6082、7020等',
       trait:'高强、耐应力腐蚀性能及焊接性能优异',
-      img01:'https://www.yangdong.co:443/yangdong_web/app_img/5.png',
-      img02:'https://www.yangdong.co:443/yangdong_web/app_img/6.png',
+      img01:'https://www.yangdong.co:8443/yangdong_web/app_img/5.png',
+      img02:'https://www.yangdong.co:8443/yangdong_web/app_img/6.png',
       href:'application02'
     },
     {
-      img:'https://www.yangdong.co:443/yangdong_web/app_img/7.png',
+      img:'https://www.yangdong.co:8443/yangdong_web/app_img/7.png',
       alt:'汽车铝合金应用',
       title:'汽车铝合金产品应用',
       e_title:'Application ofaerospace aluminum alloy products',
@@ -41,12 +41,12 @@ export default function Applicationfields() {
       content2:'目前随着铝合金工业技术的发展，部分牌号铝合金的强度和硬度已经达到或超越钢的指标，而其重量比钢大大地降低了。随着我国EA(新能源汽车)的高速发展，铝合金作为汽车轻量化方向的主力，全铝车身也成为重要卖点。',
       model:'5052、5754、5182、5083、6011、6005A、6061、6082等',
       trait:'成型性能好、烤漆硬化、氧化处理效果显著',
-      img01:'https://www.yangdong.co:443/yangdong_web/app_img/8.png',
-      img02:'https://www.yangdong.co:443/yangdong_web/app_img/9.png',
+      img01:'https://www.yangdong.co:8443/yangdong_web/app_img/8.png',
+      img02:'https://www.yangdong.co:8443/yangdong_web/app_img/9.png',
       href:'application03'
     },
     {
-      img:'https://www.yangdong.co:443/yangdong_web/app_img/10.png',
+      img:'https://www.yangdong.co:8443/yangdong_web/app_img/10.png',
       alt:'船舶用铝合金应用',
       title:'船舶用铝合金产品应用',
       e_title:'Application of marine aluminum alloy products',
@@ -54,12 +54,12 @@ export default function Applicationfields() {
       content2:'铝合金板材在船舶及海洋工程中主要用在船体结构及隔舱等上层建筑上，同时通常用小直径铝合金管材做管道，大直径管材和棒材则用作船体架构、杆构件、梁等，为了使船体轻量化，有时会在船亮结构上使用一些薄壁型材。扬东铝业的产品具有良好的强度、加工性能和耐蚀性，完全能够适应海洋应用需要。通过与国内外专家的合作，掌握了先进的船用铝合金板和各类挤压型材的生产技术，为船舶及海洋工程提供前瞻性的支持。',
       model:'5052、5754、5154、5086、5083、6005A、6082等',
       trait:'耐腐蚀及焊接性能好',
-      img01:'https://www.yangdong.co:443/yangdong_web/app_img/11.png',
-      img02:'https://www.yangdong.co:443/yangdong_web/app_img/12.png',
+      img01:'https://www.yangdong.co:8443/yangdong_web/app_img/11.png',
+      img02:'https://www.yangdong.co:8443/yangdong_web/app_img/12.png',
       href:'application04'
     },
     {
-      img:'https://www.yangdong.co:443/yangdong_web/app_img/13.png',
+      img:'https://www.yangdong.co:8443/yangdong_web/app_img/13.png',
       alt:'消费电子铝合金应用',
       title:'消费电子铝合金产品应用',
       e_title:'Application of consumer electronics aluminum alloy products',
@@ -67,12 +67,12 @@ export default function Applicationfields() {
       content2:'使用铝制散热器元件，能够满足电子产品设计指标的要求，也是提高功率器件使用寿命。铝合金板材也用于制造各种电子面板、电器柜体箱体。此外，在家具电器、无人机、AI机器人、电脑、移动电子设备等方面，均可根据不同需求，提供高性能的铝合金。',
       model:'2024、2A12、5052、5754、6061、7075等',
       trait:'强度高、机加工性能优良，散热性能良好',
-      img01:'https://www.yangdong.co:443/yangdong_web/app_img/14.png',
-      img02:'https://www.yangdong.co:443/yangdong_web/app_img/15.png',
+      img01:'https://www.yangdong.co:8443/yangdong_web/app_img/14.png',
+      img02:'https://www.yangdong.co:8443/yangdong_web/app_img/15.png',
       href:'application05'
     },
     {
-      img:'https://www.yangdong.co:443/yangdong_web/app_img/16.png',
+      img:'https://www.yangdong.co:8443/yangdong_web/app_img/16.png',
       alt:'医疗设备用铝合金应用',
       title:'医疗设备用铝合金产品应用',
       e_title:'Application of medical equipment alloy products',
@@ -80,12 +80,12 @@ export default function Applicationfields() {
       content2:'得益于医疗技术的飞速发展，大型的医疗设备越来越多，铝合金由于其良好的塑性和加工性能，以及轻量化，耐腐蚀等优点，因此在各种大型医疗设备上越来越多使用，比如超声波设备，CT设备，激光治疗设备等。',
       model:'5052、5754、5A06、5083、6061、6082等',
       trait:'耐腐蚀及焊接性能好、疲劳强度高',
-      img01:'https://www.yangdong.co:443/yangdong_web/app_img/17.png',
-      img02:'https://www.yangdong.co:443/yangdong_web/app_img/18.png',
+      img01:'https://www.yangdong.co:8443/yangdong_web/app_img/17.png',
+      img02:'https://www.yangdong.co:8443/yangdong_web/app_img/18.png',
       href:'application06'
     },
     {
-      img:'https://www.yangdong.co:443/yangdong_web/app_img/19.png',
+      img:'https://www.yangdong.co:8443/yangdong_web/app_img/19.png',
       alt:'化工容器铝合金应用',
       title:'化工容器铝合金产品应用',
       e_title:'Application of chemical container aluminum alloy products',
@@ -93,12 +93,12 @@ export default function Applicationfields() {
       content2:null,
       model:'5052、5083、5182、5454等',
       trait:'强度高、机加工性能优良，抗腐蚀性强、可回收，力学性能、抗剥落腐蚀及晶间蚀性能优',
-      img01:'https://www.yangdong.co:443/yangdong_web/app_img/20.png',
-      img02:'https://www.yangdong.co:443/yangdong_web/app_img/21.png',
+      img01:'https://www.yangdong.co:8443/yangdong_web/app_img/20.png',
+      img02:'https://www.yangdong.co:8443/yangdong_web/app_img/21.png',
       href:'application07'
     },
     {
-      img:'https://www.yangdong.co:443/yangdong_web/app_img/22.png',
+      img:'https://www.yangdong.co:8443/yangdong_web/app_img/22.png',
       alt:'工业模具用铝合金应用',
       title:'工业模具用铝合金产品应用',
       e_title:'Application of industrial mold alloy products',
@@ -106,12 +106,12 @@ export default function Applicationfields() {
       content2:null,
       model:'2A12、2024、6061、7075等',
       trait:'强度高、切削性好，机加工性能优良',
-      img01:'https://www.yangdong.co:443/yangdong_web/app_img/23.png',
-      img02:'https://www.yangdong.co:443/yangdong_web/app_img/24.png',
+      img01:'https://www.yangdong.co:8443/yangdong_web/app_img/23.png',
+      img02:'https://www.yangdong.co:8443/yangdong_web/app_img/24.png',
       href:'application08'
     },
     {
-      img:'https://www.yangdong.co:443/yangdong_web/app_img/25.png',
+      img:'https://www.yangdong.co:8443/yangdong_web/app_img/25.png',
       alt:'机械加工铝合金应用',
       title:'机械加工铝合金产品应用',
       e_title:'Application of machining aluminum alloy products',
@@ -119,12 +119,12 @@ export default function Applicationfields() {
       content2:'铝模的切削加工成本可比钢模的低35%，对铝模完全可用如下的工艺加工:补焊(修补与矫正焊接)、表面硬化处理(阳极氧化、化学镀与镀镍等)钢的铣削时间比铝模长5~10倍、钻孔时间长5倍、电火花加工时间长4倍、抛光时间长3-4倍，切削工具寿命比切削钢模的长4倍。用铝钢复合模能够大大缩短加工时间，节约加工成本。',
       model:'2A12、2024、5052、5754、5083、6061、7075等',
       trait:'强度高、机加工性能优良',
-      img01:'https://www.yangdong.co:443/yangdong_web/app_img/26.png',
-      img02:'https://www.yangdong.co:443/yangdong_web/app_img/27.png',
+      img01:'https://www.yangdong.co:8443/yangdong_web/app_img/26.png',
+      img02:'https://www.yangdong.co:8443/yangdong_web/app_img/27.png',
       href:'application09'
     },
     {
-      img:'https://www.yangdong.co:443/yangdong_web/app_img/28.png',
+      img:'https://www.yangdong.co:8443/yangdong_web/app_img/28.png',
       alt:'建筑建材用铝合金应用',
       title:'建筑建材用铝合金产品应用',
       e_title:'Application ofindustrial mold alloy products',
@@ -132,8 +132,8 @@ export default function Applicationfields() {
       content2:'除了众所周知的抗腐蚀、高强度、低重量,铝合金光彩美观，耐侵蚀性好，对光和热的反射率高，吸声机能好，通过化学及电化学的方法可获得各种不同的颜色,这使得建筑行业成为铝合金的几大主要市场之一,广泛用于产业与民用建筑的屋面、墙面、门窗、骨架、内外装饰板、天花板、吊顶、栏杆扶手、室内家具、商店货柜以及施工用的模板等。',
       model:'1050、1060、1100、3003、5005、5052、5754、5083、6061、8011',
       trait:'精度高,产品尺寸公差可符合中国国标、美标、日标、欧标等标准SGS认证等',
-      img01:'https://www.yangdong.co:443/yangdong_web/app_img/29.png',
-      img02:'https://www.yangdong.co:443/yangdong_web/app_img/30.png',
+      img01:'https://www.yangdong.co:8443/yangdong_web/app_img/29.png',
+      img02:'https://www.yangdong.co:8443/yangdong_web/app_img/30.png',
       href:'application10'
     }
   ]
@@ -190,8 +190,8 @@ export default function Applicationfields() {
       window.removeEventListener('resize',handleWindowResize)
     }
   },[])
-  const pcImgURL = 'https://www.yangdong.co:443/yangdong_web/banner/pc/app_banner.webp'
-  const mobileImgURL= 'https://www.yangdong.co:443/yangdong_web/banner/mobile/app_banner.webp'
+  const pcImgURL = 'https://www.yangdong.co:8443/yangdong_web/banner/pc/app_banner.png'
+  const mobileImgURL= 'https://www.yangdong.co:8443/yangdong_web/banner/mobile/app_banner.jpg'
   return(
     <main className={styles.applicationWrap}>
       <div className={styles.banner}>

@@ -2,7 +2,7 @@ import { useState,useEffect } from 'react'
 import styles from '@/styles/product.module.scss'
 
 export default function ProuductBanner(){
-	const host = 'https://www.yangdong.co:443/'
+	const host = 'https://www.yangdong.co:8443/'
 	const [windowSize,setWindowSize]  = useState(getWindowSize())
   function getWindowSize(){
     const {innerWidth} = window
@@ -18,8 +18,8 @@ export default function ProuductBanner(){
       window.removeEventListener('resize',handleWindowResize)
     }
   })
-	const pcImgURL = 'https://www.yangdong.co:443/yangdong_web/banner/pc/product_banner.webp'
-  const mobileImgURL= 'https://www.yangdong.co:443/yangdong_web/banner/mobile/product_banner.webp'
+	const pcImgURL = 'https://www.yangdong.co:8443/yangdong_web/banner/pc/product_banner.png'
+  const mobileImgURL= 'https://www.yangdong.co:8443/yangdong_web/banner/mobile/product_banner.jpg'
 	return (
 		<div className={styles.banner}>
 			<img src={windowSize.innerWidth >= 750 ? pcImgURL : mobileImgURL} alt='产品中心'/>

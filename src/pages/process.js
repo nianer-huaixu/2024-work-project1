@@ -2,7 +2,7 @@ import { useState,useEffect } from 'react'
 import Title from '@/components/title'
 import styles from '@/styles/process.module.scss'
 
-var imgUrl = 'https://www.yangdong.co:443/yangdong_web'
+var imgUrl = 'https://www.yangdong.co:8443/yangdong_web'
 // 加工材料 start
 function Material(){
   const data = [
@@ -336,8 +336,8 @@ export default function Process(){
       window.removeEventListener('resize',handleWindowResize)
     }
   },[])
-  const pcImgURL = 'https://www.yangdong.co:443/yangdong_web/banner/pc/process_banner.webp'
-  const mobileImgURL= 'https://www.yangdong.co:443/yangdong_web/banner/mobile/process_banner.webp'
+  const pcImgURL = 'https://www.yangdong.co:8443/yangdong_web/banner/pc/process_banner.jpg'
+  const mobileImgURL= 'https://www.yangdong.co:8443/yangdong_web/banner/mobile/process_banner.jpg'
   return(
     <main>
       <div className={styles.banner}>

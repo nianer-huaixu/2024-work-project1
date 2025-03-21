@@ -844,21 +844,19 @@ export default function Home() {
       <div className="slider-container banner-container">
         {windowSize.innerWidth >= 980 ? 
         <Slider {...settings}>
-          <div><img src={URL+'banner/pc/banner2.webp'} alt='banner'/></div>
-          <div><img src={URL+'banner/pc/banner6.webp'} alt='banner'/></div>
-          <div><img src={URL+'banner/pc/banner1.webp'} alt='banner'/></div>
-          <div><img src={URL+'banner/pc/banner3.webp'} alt='banner'/></div>
-          <div><img src={URL+'banner/pc/banner4.webp'} alt='banner'/></div>
-          {/* <div><img src={imgURL+'/pc/banner5.jpg'} alt='banner'/></div> */}
+          <div><img src={URL+'banner/pc/banner2.png'} alt='banner'/></div>
+          <div><img src={URL+'banner/pc/banner6.png'} alt='banner'/></div>
+          <div><img src={URL+'banner/pc/banner1.jpg'} alt='banner'/></div>
+          <div><img src={URL+'banner/pc/banner3.jpg'} alt='banner'/></div>
+          <div><img src={URL+'banner/pc/banner4.jpg'} alt='banner'/></div>
         </Slider>
         :
         <Slider {...settings}>
-          <div><img src={URL+'banner/mobile/banner2.webp'} alt='banner'/></div>
-          <div><img src={URL+'banner/mobile/banner6.webp'} alt='banner'/></div>
-          <div><img src={URL+'banner/mobile/banner1.webp'} alt='banner'/></div>
-          <div><img src={URL+'banner/mobile/banner3.webp'} alt='banner'/></div>
-          <div><img src={URL+'banner/mobile/banner4.webp'} alt='banner'/></div>
-          {/* <div><img src={imgURL+'/mobile/banner5.jpg'} alt='banner'/></div> */}
+          <div><img src={URL+'banner/mobile/banner2.png'} alt='banner'/></div>
+          <div><img src={URL+'banner/mobile/banner6.png'} alt='banner'/></div>
+          <div><img src={URL+'banner/mobile/banner1.jpg'} alt='banner'/></div>
+          <div><img src={URL+'banner/mobile/banner3.jpg'} alt='banner'/></div>
+          <div><img src={URL+'banner/mobile/banner4.jpg'} alt='banner'/></div>
         </Slider>
         }
       </div>

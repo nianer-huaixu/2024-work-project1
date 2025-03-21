@@ -76,8 +76,8 @@ function NewDetail(){
       window.removeEventListener('resize',handleWindowResize)
     }
   })
-  const pcImgURL = 'https://www.yangdong.co:443/yangdong_web/banner/pc/news_banner.webp'
-  const mobileImgURL= 'https://www.yangdong.co:443/yangdong_web/banner/mobile/news_banner.webp'
+  const pcImgURL = 'https://www.yangdong.co:8443/yangdong_web/banner/pc/news_banner.jpg'
+  const mobileImgURL= 'https://www.yangdong.co:8443/yangdong_web/banner/mobile/news_banner.jpg'
   return(<main>
     <PageHeader banner={windowSize.innerWidth >= 750 ? pcImgURL : mobileImgURL} />
     <div className={styles.newDetail}>

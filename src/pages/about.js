@@ -28,7 +28,7 @@ import about2022 from '../img/about/2022.png'
 import about2023 from '../img/about/2023.png'
 import about2024 from '../img/about/2024.png'
 
-const URL = 'https://www.yangdong.co:443/yangdong_web/'
+const URL = 'https://www.yangdong.co:8443/yangdong_web/'
 function AdaptiveHeight() {
   const [activeSlide, setActiveSlide] = useState(0);
   const settings = {
@@ -310,8 +310,8 @@ export default function About() {
       window.removeEventListener('resize',handleWindowResize)
     }
   },[])
-  const pcImgURL = 'https://www.yangdong.co:443/yangdong_web/banner/pc/about_banner.webp'
-  const mobileImgURL= 'https://www.yangdong.co:443/yangdong_web/banner/mobile/about_banner.webp'
+  const pcImgURL = 'https://www.yangdong.co:8443/yangdong_web/banner/pc/about_banner.png'
+  const mobileImgURL= 'https://www.yangdong.co:8443/yangdong_web/banner/mobile/about_banner.jpg'
   return(
     <main className={styles.aboutWrap}>
       <div className={styles.banner}><img src={windowSize.innerWidth >= 750 ? pcImgURL : mobileImgURL} alt='扬东铝业'/></div>
@@ -335,13 +335,13 @@ export default function About() {
           <i>Yang Chinese culture to create Oriental quality</i>
           <h3><span>扬</span>中华文化  <span>造</span>东方品质</h3>
           <div>
-            <Player ref={videoRef} autoplay src='https://www.yangdong.co:443/video/%E5%AE%A3%E4%BC%A0%E8%A7%86%E9%A2%91.mp4'/>
+            <Player ref={videoRef} autoplay src='https://www.yangdong.co:8443/video/%E5%AE%A3%E4%BC%A0%E8%A7%86%E9%A2%91.mp4'/>
           </div>
         </div>
         <div className={styles.introduceR}>
           <p>江苏扬东铝业集团有限公司(简称"扬东铝业集团”)成立于2012年,公司现已成为华东地区集铝批发零售、原材料加工、国际贸易和技术咨询为一体的大型多元化企业,主要从事高精工业铝材的加工和销售。扬东铝业位于江苏省苏州市境内,公司占地面积20000平米,物流交通极为发达,走向全国,面向国际,具有资源、质量、价格的绝对优势。</p>
           <p>二十几年的风风雨雨,江苏扬东创造了骄人的业绩,令人瞩目也令人自豪。在新世纪的历史进程中,扬东始终坚持“团结、拼搏、务实、开拓”的精神,以“质量求生存,开拓求发展”的经营理念,我们倡导“以客户的目标为追求,以客户的需求为基础”站在客户的角度思考,定尺交货,为客户降低成本。不断进取,不断完善,拥有21年专业销售经验与优秀团队,是遍布亚洲的知名供应商和国内最实力、规格最齐全的现货平台,从而使我们的产品更加精益求精,产品铺盖亚洲各地及国内大小型市场。</p>
-          <img src="https://www.yangdong.co:443/yangdong_web/img/about02.jpg"/>
+          <img src="https://www.yangdong.co:8443/yangdong_web/img/about02.jpg"/>
           <ul className={styles.strengthWarp}>
             <li>
               <b><CountUp start={1999} end={2012} duration={2} separator=''/></b>

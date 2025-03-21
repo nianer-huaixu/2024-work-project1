@@ -10,7 +10,7 @@ import consultIcon from '../img/icon/consult.svg'
 import call2 from '../img/icon/call2.svg'
 import styles from '../styles/contact.module.scss'
 
-const URL = 'https://www.yangdong.co:443/yangdong_web/'
+const URL = 'https://www.yangdong.co:8443/yangdong_web/'
 export default function Contact() {
   const contactData =[
     {icon:addressIcon,text1:'公司地址',text2:'江苏省苏州工业园区唯亭镇双灯路2号'},
@@ -78,8 +78,8 @@ export default function Contact() {
       window.removeEventListener('resize',handleWindowResize)
     }
   },[])
-  const pcImgURL = 'https://www.yangdong.co:443/yangdong_web/banner/pc/contact_banner.webp'
-  const mobileImgURL= 'https://www.yangdong.co:443/yangdong_web/banner/mobile/contact_banner.webp'
+  const pcImgURL = 'https://www.yangdong.co:8443/yangdong_web/banner/pc/contact_banner.jpg'
+  const mobileImgURL= 'https://www.yangdong.co:8443/yangdong_web/banner/mobile/contact_banner.jpg'
   return(
     <main>
       <div className={styles.banner}><img src={windowSize.innerWidth >= 750 ? pcImgURL : mobileImgURL} alt='联系我们'/></div>

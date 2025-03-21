@@ -379,24 +379,24 @@ export default function Header(props){
         <div className='left_sidebar_top'>
         <div><Image src={LeftImage} alt='产品'/></div>
         </div>
-        <p><img src='https://www.yangdong.co:443/yangdong_web/footer/icon-7.png'/>全国销售总机：</p>
-        <p style={{color:'#bb030f',fontWeight:'bold'}}><img src='https://www.yangdong.co:443/yangdong_web/footer/call.png' style={{width:'140px',margin:'4px 0'}}/></p>
-        <p className='p16'><img src='https://www.yangdong.co:443/yangdong_web/footer/icon-1.png'/>技术咨询:</p>
+        <p><img src='https://www.yangdong.co:8443/yangdong_web/footer/icon-7.png'/>全国销售总机：</p>
+        <p style={{color:'#bb030f',fontWeight:'bold'}}><img src='https://www.yangdong.co:8443/yangdong_web/footer/call.png' style={{width:'140px',margin:'4px 0'}}/></p>
+        <p className='p16'><img src='https://www.yangdong.co:8443/yangdong_web/footer/icon-1.png'/>技术咨询:</p>
         <p  style={{fontSize:'20px'}}>0512-62388298</p>
-        <p className='p16'><img src='https://www.yangdong.co:443/yangdong_web/footer/icon-2.png'/>公司销售分组:</p>
+        <p className='p16'><img src='https://www.yangdong.co:8443/yangdong_web/footer/icon-2.png'/>公司销售分组:</p>
         <p className='p14'>急单热线：</p>
         <p className='p14'>0512-62388298</p>
         <p className='p14'>订单咨询：</p>
         <p className='p14'>0512-62388058</p>
         <p className='p14'>技术咨询：</p>
         <p className='p14'>0512-62388068</p>
-        <p className='p14'><img src='https://www.yangdong.co:443/yangdong_web/footer/icon-3.png'/>E-mail:</p>
+        <p className='p14'><img src='https://www.yangdong.co:8443/yangdong_web/footer/icon-3.png'/>E-mail:</p>
         <p className='p14'>2521813109@qq.com</p>
-        <p className='p14'><img src='https://www.yangdong.co:443/yangdong_web/footer/icon-4.png'/>销售传真:</p>
+        <p className='p14'><img src='https://www.yangdong.co:8443/yangdong_web/footer/icon-4.png'/>销售传真:</p>
         <p className='p14'>0512-62388198</p>
-        <p className='p16'><img src='https://www.yangdong.co:443/yangdong_web/footer/icon-5.png'/>销售主管：黄经理</p>
+        <p className='p16'><img src='https://www.yangdong.co:8443/yangdong_web/footer/icon-5.png'/>销售主管：黄经理</p>
         <p style={{fontSize:'20px'}}>18852996299</p>
-        <p className='p16'><img src='https://www.yangdong.co:443/yangdong_web/footer/icon-6.png'/>营业时间:</p>
+        <p className='p16'><img src='https://www.yangdong.co:8443/yangdong_web/footer/icon-6.png'/>营业时间:</p>
         <p className='p14'>8:00—17:30(周一至周六)</p>
         {/* <p style={{marginTop:'.0938rem'}}>销售主管 :</p>
         <p>18852996299</p>

@@ -3,8 +3,8 @@ export const commonSlice = createSlice({
     name:'common',
     initialState:{
         newCategory:0,
-        URL:'https://www.yangdong.co:443/yangdong_web/',
-        comURL:'https://www.yangdong.co:443/'
+        URL:'https://www.yangdong.co:8443/yangdong_web/',
+        comURL:'https://www.yangdong.co:8443/'
     },
     reducers:{
         changeNewCategory:(state,action)=>{
