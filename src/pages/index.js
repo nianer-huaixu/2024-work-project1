@@ -210,8 +210,8 @@ function ProductShow(){
 // strength start 
 function Strengthcom(){
   const strength = [
-    {start:195264,num:20000,tag:'m²',cn_text:'占地面积'},
-    {start:41355,num:6000,tag:'吨',cn_text:'库存量'},
+    {start:19526,num:20000,tag:'m²',cn_text:'占地面积'},
+    {start:4135,num:6000,tag:'吨',cn_text:'库存量'},
     {start:5268,num:5000,tag:'家',cn_text:'服务客户'},
     {start:0,num:15,tag:'年',cn_text:'行业经验'},
     {start:0,num:1,tag:'天',cn_text:'现货当天发货'}
