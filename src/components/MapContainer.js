@@ -1,5 +1,4 @@
 import { useRef, useState, useEffect } from 'react';
-import Image from 'next/image'
 
 function MapComponent() {
     const mapRef = useRef(null)

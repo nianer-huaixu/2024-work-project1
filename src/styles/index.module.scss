@@ -704,6 +704,7 @@
       height: 1.0125rem;
       background: #FFFFFF;
       box-shadow: 0px 6px 30px 0px rgba(18,20,55,0.3);
+      z-index: 333;
       div{
         flex:auto;
         margin-left:.1875rem;
@@ -721,9 +722,42 @@
     }
   }
   .aboutR{  
-    background:url('/imgs/about-bg.jpg')no-repeat right;
+    background:url('/imgs/about-bg.png')no-repeat right;
     background-position: left;
     width: 60%;
+    position: relative;
+    .aboutRC{
+      position: absolute;
+      right: 20px;
+      top: 70px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      
+      div{
+        width: 50%;
+        padding: 30px 10px;
+        &:nth-child(1){
+          border-right: 2px solid red;
+          border-bottom: 2px solid red;
+        }
+        &:nth-child(2){
+          border-bottom: 2px solid red;
+        }
+        &:nth-child(3){
+          border-right: 2px solid red;
+        }
+        img{
+          margin: auto;
+        }
+        a{
+          display: block;
+          color: #fff;
+          font-size: 14px;
+          text-align: center;
+        }
+      }
+    }
   }
 }
 /* comment */
@@ -963,6 +997,13 @@
   .industry{
     .industryC{
       span{
+        display: none;
+      }
+    }
+  }
+  .aboutWrap{
+    .aboutR{
+      .aboutRC{
         display: none;
       }
     }

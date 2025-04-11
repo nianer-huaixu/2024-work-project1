@@ -36,7 +36,9 @@
     .introduceR{
       width:fit-content;
       margin-left:60px;
-      // position:relative;
+      display: flex;
+    flex-direction: column;
+    justify-content: space-between;
       p{
           font-size: 14px;
           margin-bottom:10px;
@@ -79,7 +81,7 @@
   background-attachment: fixed;
   position: relative;
   overflow: hidden;
-  height:5.625rem;
+  height:100vh;
   .histroyT{
     color:#fff;
     text-align:center;
@@ -346,9 +348,6 @@
       }
     }
   }
-  .historyWrap{
-    height:6.625rem;
-  }
   .cultureWrap{
     width: 90%;
     .cultureTop{
@@ -396,7 +395,6 @@
     }
   }
   .historyWrap{
-    height:6.625rem;
     .historyItem{
       span{
         font-size: 180px;

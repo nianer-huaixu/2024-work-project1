@@ -90,6 +90,15 @@ header{
             }
           }
         }
+        &:nth-child(6){
+          &:hover{
+            .header-aboutList{
+              height:200px;
+              -webkit-transition:all 0.5s linear;
+              transition:all 0.5s linear;
+            }
+          }
+        }
         &:nth-child(7){
           &:hover{
             .header-newList{
@@ -215,7 +224,7 @@ header{
       }
     }
   }
-  .header-newList{
+  .header-newList,.header-aboutList{
     position: fixed;
     margin-left: -30px;
     background-color: #fff;
@@ -711,6 +720,7 @@ footer{
 /* 发展历程样式 */
 .slider-container{
   width:8.75rem;
+  height: 780px;
   margin:auto;
   .historySlickStyle,.honorSlickStyle{
     height: inherit;
@@ -737,10 +747,14 @@ footer{
       text-align:center;
       margin-top:.125rem;
     }
+    .slick-list{
+      height: inherit;
+    }
     .slick-dots{
       z-index:66;
       width: 8.75rem;
       overflow:hidden;
+      bottom: 34%;
       ul{
         width:17.375rem;
         border-top:1px solid #fff;
@@ -826,6 +840,30 @@ footer{
       transition:all 0.3s linear;
       background:#bb030f!important;
     }
+  }
+  .historyText{
+    position: absolute;
+    bottom: -300px;
+    margin-top: 40px;
+    width: 8.75rem;
+    height: 240px;
+    z-index: 99;
+    p{
+      font-size: 16px;
+      color: #fff;
+      text-align: justify;
+    }
+    div{
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      p{
+        width: 49%;
+        letter-spacing: -0.0063rem;
+      }
+    }
+    
   }
 }
 .honorSlickStyle{
@@ -1132,6 +1170,13 @@ footer{
   .pageAnchor{
     width: 90%;
   }
+  .slider-container{
+    .historySlickStyle{
+      .slick-dots{
+      bottom: 38%;
+      }
+    }
+  }
 }
 @media(min-width:980px) and (max-width:1079px){
   html{
@@ -1159,6 +1204,17 @@ footer{
       width: inherit;
       img{
         width: 65%;
+      }
+    }
+  }
+  .slider-container{
+    .historySlickStyle{
+      .slick-dots{
+      bottom: 38%;
+      }
+      .historyText{
+        width: 98%;
+        bottom: -340px;
       }
     }
   }
@@ -1269,6 +1325,9 @@ footer{
     width: 100%;
     margin-top: .5rem;
     .slick-dots{
+      display: none;
+    }
+    .historyText{
       display: none;
     }
   }
@@ -1392,6 +1451,9 @@ footer{
       }
     }
     .slick-dots{
+      display: none;
+    }
+    .historyText{
       display: none;
     }
   }
@@ -1568,6 +1630,9 @@ footer{
       }
     }
     .slick-dots{
+      display: none;
+    }
+    .historyText{
       display: none;
     }
   }

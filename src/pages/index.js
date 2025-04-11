@@ -17,7 +17,7 @@ import { changeNewCategory } from '../redux/common'
 const {common} = store.getState()
 const URL = common.URL
 const comURL = common.comURL
-// console.log(URL,comURL);
+console.log(URL,comURL);
 
 // imgs
 import Image from 'next/image'
@@ -710,7 +710,14 @@ function Aboutcompany(){
     </div>
     <div className={styles.companyData}>{Item}</div>
     </div>
-    <div className={styles.aboutR}></div>
+    <div className={styles.aboutR}>
+      <div className={styles.aboutRC}>
+        <div><img src={URL +'index/icon1.png'}/><a href='/about/#introduce'>扬东简介</a></div>
+        <div><img src={URL +'index/icon2.png'}/><a href='/about/#fremawork'>组织架构</a></div>
+        <div><img src={URL +'index/icon3.png'}/><a href='/about/#history'>发展历程</a></div>
+        <div><img src={URL +'index/icon4.png'}/><a href='/about/#honor'>公司荣誉</a></div>
+      </div>  
+    </div>
   </div>
 }
 // 走进扬东 end

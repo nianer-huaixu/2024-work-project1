@@ -24,7 +24,7 @@ function MuneItem(props){
       {label:'加工中心',route:'/process',isProcess:true},
       {label:'应用领域',route:'/applicationfields',isApp:true},
       {label:'销售统计',route:'/statistics'},
-      {label:'走进扬东',route:'/about'},
+      {label:'走进扬东',route:'/about',isAbout:true},
       {label:'新闻资讯',route:'/news',isList:true},
       {label:'联系我们',route:'/contactus'}
     ]
@@ -43,6 +43,7 @@ function MuneItem(props){
           <Link href={{pathname:item.route}} className='menu-route-a'>{item.label}</Link>
         }
         {item.isChildren && (<div className='header-product'><ProductMain /></div>)}
+        {item.isAbout && (<div className='header-aboutList'><AboutList /></div>)}
         {item.isList && (<div className='header-newList'><NewSList /></div>)}
         {item.isApp && (<div className='header-appList'><Applist /></div>)}
         {item.isProcess && (<div className='header-process'><Process /></div>)}
@@ -127,6 +128,21 @@ function ProductMain(){
   )
 }
 // 产品中心definition end
+
+// about start 
+function AboutList(){
+  const data = [
+    {link:'/about/#introduce',label:'扬东简介'},
+    {link:'/about/#fremawork',label:'组织架构'},
+    {link:'/about/#history',label:'发展历程'},
+    {link:'/about/#honor',label:'公司荣誉'}
+  ]
+  const Item = data.map((item,i)=>{
+    return <li key={i}><a href={item.link}>{item.label}</a></li>
+  })
+  return <ul>{Item}</ul>
+}
+// end
 
 // newList start
 function NewSList(){
