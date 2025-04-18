@@ -734,10 +734,10 @@ footer{
       z-index:666;
     }
     .slick-prev{
-      left:.1875rem;
+      left:0px;
     }
     .slick-next{
-      right:.1875rem;
+      right:0px;
     }
   }
   .historySlickStyle{
@@ -754,7 +754,7 @@ footer{
       z-index:66;
       width: 8.75rem;
       overflow:hidden;
-      bottom: 34%;
+      bottom: 37%;
       ul{
         width:17.375rem;
         border-top:1px solid #fff;
@@ -800,7 +800,13 @@ footer{
       }
     }
   }
+  .honorSlickStyle{
+    .slick-prev,.slick-next{
+      top:50%;
+    }
+  }
   .slick-prev,.slick-next{
+    top:24%;
     &::before{
       content:''!important;
       position: absolute;
@@ -843,13 +849,14 @@ footer{
   }
   .historyText{
     position: absolute;
-    bottom: -300px;
+    bottom: -260px;
     margin-top: 40px;
     width: 8.75rem;
     height: 240px;
     z-index: 99;
     p{
       font-size: 16px;
+      // line-height: 18px;
       color: #fff;
       text-align: justify;
     }
