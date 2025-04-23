@@ -39,7 +39,7 @@ function NewDetail(){
   const [data,setData] = useState({detail:{}})
   useEffect(() => {
     fetchData()
-  }, [router.query])//监听路由变化可以出发数据请求
+  }, [router.query])//监听路由变化可以触发数据请求
   const fetchData = async () => {
     const req ={category:Number(searchArr[0]),id:Number(searchArr[1])}
   try{

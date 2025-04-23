@@ -720,7 +720,7 @@ footer{
 /* 发展历程样式 */
 .slider-container{
   width:8.75rem;
-  height: 780px;
+  height: inherit;
   margin:auto;
   .historySlickStyle,.honorSlickStyle{
     height: inherit;
@@ -754,7 +754,7 @@ footer{
       z-index:66;
       width: 8.75rem;
       overflow:hidden;
-      bottom: 37%;
+      bottom: 48%;
       ul{
         width:17.375rem;
         border-top:1px solid #fff;
@@ -1180,7 +1180,7 @@ footer{
   .slider-container{
     .historySlickStyle{
       .slick-dots{
-      bottom: 38%;
+      bottom: 50%;
       }
     }
   }
@@ -1217,7 +1217,7 @@ footer{
   .slider-container{
     .historySlickStyle{
       .slick-dots{
-      bottom: 38%;
+      bottom: 50%;
       }
       .historyText{
         bottom: -340px;
