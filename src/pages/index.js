@@ -1,7 +1,7 @@
 'use client' // 客户端渲染时
 import React, { useState, useEffect } from 'react'
 import { Player } from 'video-react'
-import Slider from "react-slick";
+import Slider from "react-slick"
 import Link from 'next/link'
 import CountUp from "react-countup";
 import { Inter, Share_Tech } from 'next/font/google'
@@ -836,6 +836,15 @@ export default function Home() {
     const {innerWidth} = window
     return {innerWidth}
   }
+  const flowData = [
+    {text:'需求解读'},
+    {text:'方案确定'},
+    {text:'造型配样'},
+    {text:'方案报价'},
+    {text:'加工定制'},
+    {text:'物流配送'},
+    {text:'服务售后'}
+  ]
   useEffect(()=>{
     // 处理屏幕宽度变化
     function handleWindowResize(){
@@ -878,7 +887,15 @@ export default function Home() {
       <div className={styles.flowWrap}>
       <Title mainhead={['定制流程 · ','匠心制造']} subhead={'细化每一个环节，时刻对客户负责'}/>
       {windowSize.innerWidth >= 750 && <div className={[styles.flowMain,'main'].join(' ')}>
-          <img src={URL +'index/flow.png'} alt='定制流程' style={{width:'7.9063rem',height:'1.5688rem'}}/>
+          {/* <img src={URL +'index/flow.png'} alt='定制流程'/> */}
+          <div className={styles.flowMainL} style={{width:'7.9063rem',height:'1.5688rem'}}>
+            {flowData.map((item,i)=>{
+              return <div key={i} className={styles.flowMainLI}>
+                <div className={styles.flowMainLIimg}><img src={URL +'index/'+item.text +'.png'}/></div>
+                <p>{item.text}</p>
+              </div>
+            })}
+          </div>
           <div className={styles.flowHref}>
             <a target="_blank" href='https://html.ecqun.com/kf/sdk/openwin.html?corpid=11627559&cstype=rand&mode=0&cskey=kkd1a23CLKZMWrHPzz&scheme=2&source=100'>快速咨询</a>
           </div>

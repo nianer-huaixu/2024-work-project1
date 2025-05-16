@@ -182,6 +182,7 @@
 // 产品容器
 .coreProduct{
   background-image:url('/imgs/product-bg.png');
+  background-size: cover;
   .productC{
     border-right:1px solid #EEEEEE;
     border-bottom:1px solid #EEEEEE;
@@ -306,10 +307,47 @@
 .flowWrap{
   height:2.6875rem;
   background-image:url('/imgs/flow-bg.png');
+  background-size: cover;
   margin-top:.1875rem;
   .flowMain{
     display:flex;
     justify-content: center;
+    .flowMainL{
+      background-color: #f0f1f1;
+      border-top-left-radius: 14px;
+      border-bottom-left-radius: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 .25rem;
+      
+      .flowMainLI{
+        &:hover{
+          .flowMainLIimg{
+            border: 1px solid #bb030f;
+          }
+          p{
+            color: #bb030f
+            ;
+          }
+        }
+        .flowMainLIimg{
+          width: .8rem;
+          height: .8rem;
+          border-radius: .4rem;
+          overflow: hidden;
+          img{
+            width: 100%;
+            height: 100%;
+          }
+        }
+        p{
+          text-align: center;
+          font-size: 20px;
+          margin-top: 4px;
+        }
+      }
+    }
     .flowHref{
       width:.8375rem;
       height:0;

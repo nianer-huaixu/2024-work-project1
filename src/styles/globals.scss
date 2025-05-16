@@ -75,7 +75,7 @@ header{
         &:nth-child(2){
           &:hover{
             .header-product{
-              height:2.8125rem;
+              height: 400px;
               -webkit-transition:all 0.5s linear;
               transition:all 0.5s linear;
             }
@@ -157,13 +157,14 @@ header{
     background-color:#fff;
     width:100%;
     height:0px;
+    // height: 450px;
     box-shadow: 0px 10px 18px 0px rgba(35,24,21,0.1);
     overflow: hidden;
     -webkit-transition:all 0.5s linear;
     transition:all 0.5s linear;
-    z-indexx:999;
+    z-index:999;
     .product-main{
-      height:2.8125rem;
+      height:400px;
       display:flex;
       border:1px solid #F0F1F1;
       .product-category{
@@ -188,8 +189,8 @@ header{
         width:100%;
         .product-type, .product-serise div{
           border-bottom:1px solid #F0F1F1;
-          height:.35rem;
-          line-height:.35rem;
+          height:56px;
+          line-height:56px;
           display:flex;
           color:#000;
         }
@@ -199,6 +200,12 @@ header{
           b{
             width:.6875rem;
             text-align:left;
+            a{
+              display: block;
+              height: inherit;
+              line-height: inherit;
+              width: max-content;
+            }
             a:hover{
               color:var(--active-color)
             }
@@ -416,9 +423,10 @@ header{
       content:'';
       position: absolute;
       border-style: solid;
-      border-width: 0 .0625rem .0625rem;
+      border-width: 0 10px 10px;
       border-color: transparent transparent var(--active-color);
-      bottom:-0.0938rem;
+      bottom:2px;
+      // left: 0;
       margin-left:-50%;
       transform: translateX(-50%);
     }
@@ -592,6 +600,7 @@ footer{
   text-align:left;
   padding-top:60px;
   background-image:url('/imgs/footer-bg.jpg');
+  background-size: cover;
   padding-bottom: 20px;
   p{
     font-size:14px;
