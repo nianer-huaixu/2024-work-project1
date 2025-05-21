@@ -53,15 +53,32 @@ export default function Contact() {
       fax:'0512-62388198',
       email:'2521813109@qq.com',
       img:URL + 'concert/erweima_H2.jpg'
+    },
+    {
+      name:'尹小艳',
+      position:'销售专员 / Sales Executive',
+      tel:'138 6257 6851',
+      fax:'0512-62388198',
+      email:'2521813109@qq.com',
+      img:'https://www.yangdong.co:8443/yangdong-new/contact/erweima4.webp'
+    },
+    {
+      name:'黄玲',
+      position:'销售专员 / Sales Executive',
+      tel:'180 2024 2001',
+      fax:'0512-62388198',
+      email:'2521813109@qq.com',
+      img:'https://www.yangdong.co:8443/yangdong-new/contact/erweima5.webp'
+    },
+    {
+      name:'徐小玲',
+      position:'销售专员 / Sales Executive',
+      text3:'180 2024 2063',
+      fax:'0512-62388198',
+      email:'2521813109@qq.com',
+      img:'https://www.yangdong.co:8443/yangdong-new/contact/erweima6.webp'
     }
-    // {
-    //   name:'张婉婷',
-    //   position:'销售专员 / Sales Executive',
-    //   tel:'13962121837',
-    //   fax:'0512-62388198',
-    //   email:'2521813109@qq.com',
-    //   img: URL + 'concert/erweima_R.jpg'
-    // }
+  
   ]
   const [windowSize,setWindowSize]  = useState(getWindowSize())
   function getWindowSize(){
