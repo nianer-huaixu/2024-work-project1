@@ -309,16 +309,16 @@ function Duty(){
       img:URL +'concert/erweima_H1.jpg'
     },
     {
-      name:'林小姐',
-      position:'销售专员 / Sales Executive',
+      name:'林女士',
+      position:'销售主管 / Sales Executive',
       tel:'15850006720',
       fax:'0512-62388198',
       email:'2521813109@qq.com',
       img:URL +'concert/erweima_L.jpg'
     },
     {
-      name:'朱小姐',
-      position:'销售专员 / Sales Executive',
+      name:'朱女士',
+      position:'销售主管 / Sales Executive',
       tel:'18963650984',
       fax:'0512-62388198',
       email:'2521813109@qq.com',

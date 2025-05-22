@@ -31,24 +31,24 @@ export default function Contact() {
       img:URL + 'concert/erweima_H1.jpg'
     },
     {
-      name:'林小姐',
-      position:'销售专员 / Sales Executive',
+      name:'林女士',
+      position:'销售主管 / Sales Executive',
       tel:'15850006720',
       fax:'0512-62388198',
       email:'2521813109@qq.com',
       img:URL + 'concert/erweima_L.jpg'
     },
     {
-      name:'朱小姐',
-      position:'销售专员 / Sales Executive',
+      name:'朱女士',
+      position:'销售主管 / Sales Executive',
       tel:'18963650984',
       fax:'0512-62388198',
       email:'2521813109@qq.com',
       img:URL + 'concert/erweima_Z.jpg'
     },
     {
-      name:'黄海珠',
-      position:'销售专员 / Sales Executive',
+      name:'黄女士',
+      position:'销售主管 / Sales Executive',
       tel:'13776080469',
       fax:'0512-62388198',
       email:'2521813109@qq.com',
@@ -56,7 +56,7 @@ export default function Contact() {
     },
     {
       name:'尹小艳',
-      position:'销售专员 / Sales Executive',
+      position:'销售专员 / Sales Specialist',
       tel:'138 6257 6851',
       fax:'0512-62388198',
       email:'2521813109@qq.com',
@@ -64,7 +64,7 @@ export default function Contact() {
     },
     {
       name:'黄玲',
-      position:'销售专员 / Sales Executive',
+      position:'销售专员 / Sales Specialist',
       tel:'180 2024 2001',
       fax:'0512-62388198',
       email:'2521813109@qq.com',
@@ -72,7 +72,7 @@ export default function Contact() {
     },
     {
       name:'徐小玲',
-      position:'销售专员 / Sales Executive',
+      position:'销售专员 / Sales Specialist',
       text3:'180 2024 2063',
       fax:'0512-62388198',
       email:'2521813109@qq.com',
