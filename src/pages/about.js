@@ -309,7 +309,7 @@ function Duty(){
       img:URL +'concert/erweima_H1.jpg'
     },
     {
-      name:'林女士',
+      name:'林经理',
       position:'销售主管 / Sales Executive',
       tel:'15850006720',
       fax:'0512-62388198',
